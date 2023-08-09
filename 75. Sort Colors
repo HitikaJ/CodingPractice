@@ -1,0 +1,26 @@
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int low = 0, mid = 0, high = nums.size()-1;
+        while(mid<=high)
+        {
+            if(nums[mid]==0)
+            {
+                swap(nums[mid],nums[low]);
+                low++;
+                mid++;
+            }
+            else if(nums[mid]==1)
+                mid++;
+            
+            else
+            {
+                swap(nums[mid],nums[high]);
+                high--;
+            }
+        }
+    }
+};
+// Whenever I see 0, I swap it with element present at low position.
+// When I get 1, I just let it be and when i encounter 2 I swap it with element at high position. 
+// Similarly I keep incrementing and decrementig the variables - high, low and mid.
