@@ -1,0 +1,50 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& nums) {
+        int diff =0;
+        int maxdiff=0;
+        int n=nums.size();
+
+         int l=nums[0];
+        
+        for(int i=0;i<n;i++){
+            
+            if(nums[i]<l){
+                l=nums[i];
+                
+            }
+                  
+            diff=nums[i]-l;
+                
+            
+            if(diff>maxdiff){
+                maxdiff=diff;
+                
+
+            }
+            
+        }
+        return maxdiff;
+    }
+    // int least(vector<int>& nums){
+    //     int l=nums[0];
+    //     int n=nums.size();
+    //     for(int i=0;i<n;i++){
+            
+    //         if(nums[i]<l){
+    //             l=nums[i];
+    //             return i;
+    //         }
+            
+    //     }
+    //     return 0;
+
+  
+
+
+
+
+
+
+};
+
