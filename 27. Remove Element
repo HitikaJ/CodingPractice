@@ -1,0 +1,46 @@
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+
+        int count = 0;
+        
+        for (int i = 0; i < nums.size(); i++) {
+           
+            if (nums[i] != val) {
+                nums[count++] = nums[i];
+            }
+        }
+        return count;
+    }
+        // if(nums.empty())
+        // return 0;
+        // if(nums.size()==1){
+        //     if(nums[0]==val)
+        //         return 0;
+        //     else 
+        //     return 1;    
+        //     }
+        // int st=0;
+        // int n=nums.size();
+        // int ed=nums.size()-1;
+        // int count=0;
+
+        // while(st<ed){
+            
+        //     if(nums[ed]==val){
+        //         ed--;
+        //     }
+        //     if(nums[st]==val){
+        //         swap(nums[st],nums[ed]);
+        //         count++;
+     
+        //     }
+        //     st++;
+        // }
+        // if(count==0){
+        //     return n;
+        // }
+        // else
+        // return n-count-1;
+    
+};
