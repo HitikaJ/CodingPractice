@@ -1,0 +1,49 @@
+class Solution {
+public:
+ double solve(double x,int n){
+          if(n==0){
+            return 1; //power of 0 is 1;
+        }
+       double temp=myPow(x,n/2);
+        temp=temp*temp;
+        if(n%2==0){ // if even  return  just without doing nothing
+            return temp;
+        }
+        else{
+            return temp*x;//if odd multiple  return by multipling once more with given number
+        }
+    }
+    double myPow(double x, int n) {
+        double ans=solve(x,abs(n));
+        if(n<0)
+            return 1/ans;
+            return ans;
+    }
+};
+        
+//     double y=x;
+    
+//     if(n==0){
+//          return 1;
+//     }
+//     if(n==-1){
+//          return 1/x;
+//     }
+//     if(n==1){
+//          return x;
+//     }
+
+
+// for(double i=1;i<abs(n)/2;i++){
+//      y=y*x;
+// }
+// y=y*y;
+// if(n%2!=0){
+//      y=y*x;
+// }
+
+// if(n<0){
+//      return 1/y;
+// }
+// return y;
+// }
