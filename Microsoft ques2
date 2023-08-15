@@ -1,0 +1,37 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+#include <vector>
+using namespace std;
+
+int solution(vector<int> &arr, int X, int Y) {
+    int N=arr.size();
+    int m=0;
+    int sum=0;
+    int minsum=INT_MAX;
+    for(int i=0;i<N;i=i+Y){
+        if(m<X){
+            sum=sum+arr[i];
+            cout<<"a"<<endl;
+            cout<<sum<<endl;
+            m++;
+    }
+    // if(m==2){
+   
+    // cout<<minsum<<endl;
+    // }
+    }
+     if(sum<minsum){
+        minsum=sum;
+    }
+    return minsum;
+}
+
+int main() {
+    vector<int> vect{ 4, 2, 3,7 };
+    int x=2;
+    int y=2;
+    int q=solution(vect,x,y);
+    cout << q;
+
+    return 0;
+}
