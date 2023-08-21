@@ -1,0 +1,33 @@
+class Solution {
+public:
+    int lengthOfLongestSubstring(string A) {
+        // unordered_map<char,int>m;
+        // int left =0; 
+        // int right=0;
+        int n=A.size();
+        // int len=0;
+        // while(right<n){
+        //     if(m.containsk)
+
+        //       int n = A.length();
+    int maxi=INT_MIN;;
+    if(n==0){
+        return 0;
+    }
+    int i=0,j=0;
+    unordered_set<char>s;
+    while(j<n){
+        while(s.find(A[j])!=s.end()){
+            
+                s.erase(A[i]);
+                i++;
+            
+        }
+        maxi=max(maxi,j-i+1);
+        s.insert(A[j]);
+        j++;
+    }
+    return maxi;
+}
+        
+};
