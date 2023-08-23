@@ -1,0 +1,27 @@
+vector<int> rotateArray(vector<int>nums, int k) {
+    int n = nums.size();
+        int m=k%n;
+        int temp[m+1];
+
+        for(int i=0;i<m;i++){
+            temp[i]=nums[i];
+
+        }
+        // for(int i=0;i<m;i++){
+        //     cout<<temp[i];
+
+        // }
+        // cout<<endl;
+
+        int j=0;
+        for(int i=m;i<n;i++){
+            nums[j]=nums[i];
+            j++;
+        }
+       j=0;
+        for(int i=n-m;i<n;i++){
+            nums[i]=temp[j];
+            j++;
+        }
+        return nums;
+    }
