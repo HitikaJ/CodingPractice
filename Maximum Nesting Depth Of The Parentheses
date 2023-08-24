@@ -1,0 +1,19 @@
+int maxDepth(string s) {
+	
+	int count=0;
+	int maxx=0;
+        for (auto ch : s) {
+          if (ch=='(')
+		  
+		  count++;
+
+        
+		else if (ch == ')') {
+                    
+		count--;
+                  
+        }
+		maxx=max(count,maxx);
+        }
+                return maxx;
+}
